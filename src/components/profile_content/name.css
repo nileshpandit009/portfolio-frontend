@@ -1,0 +1,46 @@
+@media only screen and (min-width: 960px) {
+  #profile-name {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background-color: var(--bg-color);
+    position: relative;
+    left: -117px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  #profile-name {
+    margin: 0 auto;
+    margin-top: -15vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    background-color: var(--bg-color);
+    border-radius: 50% 50% 0 0;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #profile-name {
+    border-radius: 12em 12em 0 0;
+    width: 70%;
+    height: 150px;
+    margin-top: -20vh;
+  }
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 3.5em;
+  line-height: 1.2em;
+}
