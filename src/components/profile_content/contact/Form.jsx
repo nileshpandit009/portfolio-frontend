@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import "./form.css";
 import TextField from "./TextField";
+import { sendEmail } from "../../../service/mailer.service";
 
-function Form(props) {
+function Form({ sent, setSent }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [error, setError] = useState({
     name: false,
@@ -30,6 +31,11 @@ function Form(props) {
     e.preventDefault();
     if (validate()) {
       console.log(form);
+      console.log(e);
+      e.target.reset();
+      // sendEmail(form.name, form.email, form.message)
+      //   .then((resp) => setSent(true))
+      //   .catch((err) => setSent(false));
     } else {
       console.log("Form has errors");
     }
