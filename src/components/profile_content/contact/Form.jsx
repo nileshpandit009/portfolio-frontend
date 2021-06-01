@@ -30,12 +30,12 @@ function Form({ sent, setSent }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      console.log(form);
-      console.log(e);
-      e.target.reset();
-      // sendEmail(form.name, form.email, form.message)
-      //   .then((resp) => setSent(true))
-      //   .catch((err) => setSent(false));
+      sendEmail(form.name, form.email, form.message)
+        .then((resp) => {
+          setSent(true);
+          e.target.reset();
+        })
+        .catch((err) => setSent(false));
     } else {
       console.log("Form has errors");
     }
@@ -71,25 +71,8 @@ function Form({ sent, setSent }) {
           errorMessage="Care to elaborate? Message should be at least 25 characters long."
           textArea
         />
-        {/* <textarea
-          className={`form-input message-area${
-            error.message ? " input-error" : ""
-          }`}
-          onChange={handleChange}
-          id="message-text-area"
-          name="message"
-          multiple
-          placeholder="Your message"
-        />
-        <span
-          className="error-msg"
-          style={{ display: `${error.message ? "block" : "none"}` }}
-        >
-          Care to elaborate? Message should be at least 25 characters long.
-        </span> */}
-        <button type="submit" id="submit-button">
+        <button disabled={sent} type="submit" id="submit-button">
           <FontAwesomeIcon id="submit-btn-icon" icon={faPaperPlane} size="lg" />
-          {/* <img id="submit-btn-icon" src={sendBtnImg} /> */}
         </button>
       </div>
     </form>
