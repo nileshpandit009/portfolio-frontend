@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./navbar.css";
 import logo from "../../assets/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faTimes, faDownload } from "@fortawesome/free-solid-svg-icons";
+import resume from "../../assets/resume.pdf";
 
 function NavBar(props) {
   const [hover, setHover] = useState(false);
@@ -68,6 +69,20 @@ function NavBar(props) {
               onClick={toggleHover}
             >
               Contact
+            </a>
+          </li>
+          <li className="resume-btn">
+            <a
+              className={`nav-link${hover ? " active" : ""}`}
+              href={resume}
+              download="Nilesh_Pandit-Resume"
+              onClick={toggleHover}
+              style={{ padding: "0 1.5em" }}
+            >
+              <span style={{ marginRight: "0.5em" }}>
+                <FontAwesomeIcon icon={faDownload} size="sm" />
+              </span>
+              Download CV
             </a>
           </li>
         </ul>
