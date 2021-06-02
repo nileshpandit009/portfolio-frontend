@@ -20,4 +20,5 @@ html {
   background-color: var(--bg-color);
   color: var(--text-primary);
   scroll-behavior: smooth;
+  scroll-padding-top: 5em;
 }

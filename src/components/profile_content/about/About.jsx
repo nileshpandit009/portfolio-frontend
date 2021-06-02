@@ -7,16 +7,16 @@ function About(props) {
       <div className="section-container">
         <span className="section-header-text">About me</span>
         <div className="section-content-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-          doloremque voluptas alias a saepe optio debitis, porro facilis neque,
-          consequuntur nisi totam unde error quia, consequatur odit repudiandae
-          libero in! Nulla nam laborum hic quis vitae distinctio vel impedit,
-          eius et at modi sint, mollitia vero doloremque provident, soluta illo
-          enim? Dolore sit dignissimos optio exercitationem, architecto
-          distinctio autem deserunt! Quam, possimus. Atque ratione incidunt fuga
-          dolores, eum cupiditate quisquam aperiam alias animi nihil eveniet
-          vero accusamus maiores libero accusantium, quia quaerat voluptatem
-          officiis quod totam iste. Voluptates, maxime. Maiores.
+          So, it started when I was a kid and used my computer only to play
+          Counter-Strike. Later, I realized that I could do a lot more with
+          computers than just play games.
+          <br />
+          I wrote my first "Hello, world!" program in C when I was 14 and then
+          began my journey as a software developer.
+          <br />
+          Now, I build robust, efficient, and scalable backend and RESTful APIs
+          in Java and Ruby, with a unique skill of designing user-friendly
+          interfaces in ReactJS which run as smooth as a knife on butter.
         </div>
       </div>
     </div>
