@@ -1,13 +1,72 @@
-@import url("../../colors.css");
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400&display=swap");
-
-.intro-container {
-  padding: 1em;
+#get-in-touch {
+  height: initial !important;
+  position: relative;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  font-weight: 300;
+  transition: all 0.15s ease-in-out;
 }
 
-.intro-text {
-  font-family: "Mukta", sans-serif;
-  font-size: 2.5em;
-  font-weight: 200;
+#get-in-touch:hover {
   color: var(--text-secondary);
+  transition: all 0.15s ease-in-out;
+}
+
+#get-in-touch:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-secondary);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+#get-in-touch:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.about-me-btn-container {
+  margin-top: 2em;
+}
+
+.about-me-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  /* margin: 0.5em; */
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+@keyframes mouse-anim {
+  0% {
+    top: -5px;
+  }
+  50% {
+    top: 8px;
+  }
+  100% {
+    top: -5px;
+  }
+}
+
+.icon {
+  position: relative;
+  animation: mouse-anim 1s ease-in-out 0s infinite;
+}
+
+@media only screen and (max-width: 960px) {
+  .about-me-btn-container,
+  .about-me-btn {
+    visibility: hidden;
+  }
 }
