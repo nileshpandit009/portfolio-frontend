@@ -14,3 +14,8 @@
     margin: 0;
   }
 }
+
+@font-face {
+  font-family: "Creattion";
+  src: local("Creattion"), url("./assets/Creattion.woff") format("woff");
+}
