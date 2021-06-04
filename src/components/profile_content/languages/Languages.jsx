@@ -10,7 +10,7 @@ function Languages(props) {
         <span className="section-header-text">Languages</span>
         <div className="section-content-text">
           {languages.map((lang) => (
-            <LanguageItem lang={lang} />
+            <LanguageItem key={lang.id} lang={lang} />
           ))}
         </div>
       </div>

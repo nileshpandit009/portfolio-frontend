@@ -10,7 +10,7 @@ function Skills(props) {
         <span className="section-header-text">Skills</span>
         <div className="section-content-text skills-container">
           {skills.map((skill) => (
-            <SkillItem skill={skill} />
+            <SkillItem key={skill.id} skill={skill} />
           ))}
         </div>
       </div>

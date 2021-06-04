@@ -7,27 +7,27 @@ function ProgressRing({ percent }) {
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (percent / 100) * circumference;
   return (
-    <svg class="progress-ring" width="120" height="120">
+    <svg className="progress-ring" width="120" height="120">
       <g>
         <circle
           style={{
             strokeDasharray: `${circumference} ${circumference}`,
             strokeDashoffset: offset,
           }}
-          class="progress-ring__circle"
+          className="progress-ring__circle"
           stroke="var(--text-secondary)"
-          stroke-width="2"
+          strokeWidth="2"
           fill="transparent"
           r={radius}
           cx="60"
           cy="60"
         />
-        <text x="60" y="60" text-anchor="middle">
+        <text x="60" y="60" textAnchor="middle">
           <tspan
             dx="5"
             dy="5"
-            font-weight="400"
-            font-size="1em"
+            fontWeight="400"
+            fontSize="1em"
             fill="var(--text-secondary)"
           >{`${percent} %`}</tspan>
         </text>
