@@ -12,7 +12,7 @@ a {
   align-items: center;
   text-decoration: none;
   color: inherit;
-  cursor: default;
+  cursor: pointer;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
