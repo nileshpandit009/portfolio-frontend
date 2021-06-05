@@ -4,8 +4,11 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import "./form.css";
 import TextField from "./TextField";
 import { sendEmail } from "../../../service/mailer.service";
+import CircularProgress from "./circular_progress/CircularProgress";
 
-function Form({ sent, setSent }) {
+function Form(props) {
+  const [disabled, setDisabled] = useState(false);
+  const [hideMsg, setHideMsg] = useState(true);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [error, setError] = useState({
     name: false,
@@ -30,12 +33,22 @@ function Form({ sent, setSent }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
+      setDisabled(true);
       sendEmail(form.name, form.email, form.message)
         .then((resp) => {
-          setSent(true);
+          console.log("Email sent!");
+          setHideMsg(false);
           e.target.reset();
         })
-        .catch((err) => setSent(false));
+        .catch((err) => console.log("Could not send email"))
+        .finally(() => {
+          setTimeout(() => {
+            setHideMsg(true);
+          }, 3000);
+          setDisabled(false);
+          // setTimeout(() => {
+          // }, 10000);
+        });
     } else {
       console.log("Form has errors");
     }
@@ -71,8 +84,21 @@ function Form({ sent, setSent }) {
           errorMessage="Care to elaborate? Message should be at least 25 characters long."
           textArea
         />
-        <button disabled={sent} type="submit" id="submit-button">
-          <FontAwesomeIcon id="submit-btn-icon" icon={faPaperPlane} size="lg" />
+        <span hidden={hideMsg} className="message-sent">
+          Message sent!
+        </span>
+        <CircularProgress
+          size="md"
+          className="message-sent"
+          hidden={!disabled}
+        />
+        <button disabled={disabled} type="submit" id="submit-button">
+          <FontAwesomeIcon
+            id="submit-btn-icon"
+            icon={faPaperPlane}
+            size="lg"
+            disabled={disabled}
+          />
         </button>
       </div>
     </form>

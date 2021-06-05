@@ -19,7 +19,7 @@
 .percent {
   font-weight: 400;
   position: absolute;
-  top: -20px;
+  top: -25px;
   right: 0;
   color: var(--text-secondary);
 }
