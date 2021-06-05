@@ -70,3 +70,20 @@
 #submit-btn-icon:hover {
   transition: 0.3s;
 }
+
+#submit-button:disabled,
+#submit-button[disabled],
+#submit-btn-icon:disabled,
+#submit-btn-icon[disabled],
+#submit-btn-icon:disabled:hover,
+#submit-btn-icon[disabled]:hover {
+  background-color: #999 !important;
+  color: #666666 !important;
+  box-shadow: none;
+  border: none;
+}
+
+.message-sent {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
