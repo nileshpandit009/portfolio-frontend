@@ -1,0 +1,31 @@
+.experience {
+  padding: 2em 0;
+}
+
+.resume-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  position: relative;
+  right: 20px;
+}
+
+.resume-item-duration {
+  font-weight: 500;
+  font-size: 0.67rem;
+  color: var(--text-secondary);
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotateZ(270deg);
+  height: 1em;
+  width: 5rem;
+  position: absolute;
+  left: -15px;
+}
+
+.resume-item-name {
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: 2.5em;
+}

@@ -27,10 +27,16 @@
   }
 
   .section-container {
-    padding: 1em 10em 2em 5em;
+    padding: 1em 5em 2em 5em;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .section-container {
+    padding: 1em 10em 2em 5em;
   }
 }
 
@@ -52,7 +58,7 @@
 
   .vertical-center {
     justify-content: center;
-    padding-bottom: 10em;
+    padding-bottom: 12em;
   }
 
   .section-container {
@@ -60,6 +66,12 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .vertical-center {
+    padding-bottom: 5em;
   }
 }
 
